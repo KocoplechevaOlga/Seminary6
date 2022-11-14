@@ -25,5 +25,16 @@ void PrintArray (int[] array)
     Console.WriteLine("]");
 }
 
+void ReversArray (int [] array)
+{
+    for (int i = 0; i < array.Length/2; i++)
+    {
+        int temp = array[i];
+        array[i] = array[array.Length-1-i];
+        array[array.Length-1-i] = temp;
+    }
+}
 int[] arr = CreateArrayRndInt(5, 1, 9);
+PrintArray(arr);
+ReversArray(arr);
 PrintArray(arr);
